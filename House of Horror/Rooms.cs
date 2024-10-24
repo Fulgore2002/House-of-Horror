@@ -1,7 +1,7 @@
 ﻿using House_Of_Horror;
 using System;
 
-namespace House_Of_Horror 
+namespace House_Of_Horror
 {
     public class Rooms
     {
@@ -58,11 +58,11 @@ namespace House_Of_Horror
                         }
                         else if (player.Inventory.HasItem("Gold Jewelry"))
                         {
-                            Console.WriteLine("Congratulations! You have safely left the house with the Gold Jewelry.");
+                            Console.WriteLine("Congratulations! You have safely left the house with the Gold Jewelry, but you feel like there was still more in the house");
                         }
                         else if (player.Inventory.HasItem("Gold Coins"))
                         {
-                            Console.WriteLine("Congratulations! You have safely left the house with the Gold Coins.");
+                            Console.WriteLine("Congratulations! You have safely left the house with the Gold Coins, but you feel like there was still more in the house");
                         }
                         break;
                     }
@@ -81,7 +81,7 @@ namespace House_Of_Horror
         {
             Console.WriteLine("You chose to go into the living room.");
             Console.WriteLine("As you walk in, you see a sleeping pitbull guarding some gold jewelry.");
-            Console.WriteLine("Do you want to steal the jewelry?");
+            Console.WriteLine("Do you want to steal the jewelry? Warning");
             Console.Write("> ");
             string pitbullChoice = Console.ReadLine();
             if (pitbullChoice == "yes")
@@ -155,7 +155,7 @@ namespace House_Of_Horror
             }
         }
 
-            private void EnterKitchen()
+        private void EnterKitchen()
         {
             Console.WriteLine("You chose to go into the kitchen.");
             Console.WriteLine("As you walk in, you see a refrigerator humming loudly.");
@@ -167,7 +167,7 @@ namespace House_Of_Horror
                 Console.WriteLine("You open the refrigerator and find some expired food and a rusty key.");
                 player.Inventory.AddItem("Rusty Key");
 
-                Console.WriteLine("As you take the key from the refrigerator you hear a noise com.");
+                Console.WriteLine("As you take the key from the refrigerator you hear a noise coming from the pantry.");
                 Console.WriteLine("Do you want to investigate the noise coming from the pantry? (yes/no)");
                 string pantryChoice = Console.ReadLine();
                 if (pantryChoice.ToLower() == "yes")
@@ -245,4 +245,3 @@ namespace House_Of_Horror
         }
     }
 }
-  
