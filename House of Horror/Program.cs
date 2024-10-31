@@ -22,6 +22,19 @@ namespace House_Of_Horror
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Red;
+            DisplayTitle();
+            Console.ResetColor();
+
+            Console.WriteLine("Enter your player's name:");
+            string playerName = Console.ReadLine();
+
+            Player player = new Player(playerName); // Create a Player object
+            Rooms rooms = new Rooms(player); // Pass the Player object to the Rooms constructor
+            rooms.PlayGame();
+        }
+
+        public static void DisplayTitle()
+        {
             Console.WriteLine(@"
  ██░ ██  ▒█████   █    ██   ██████ ▓█████     ▒█████    █████▒    ██░ ██  ▒█████   ██▀███   ██▀███   ▒█████   ██▀███  
 ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀    ▒██▒  ██▒▓██   ▒    ▓██░ ██▒▒██▒  ██▒▓██ ▒ ██▒▓██ ▒ ██▒▒██▒  ██▒▓██ ▒ ██▒
@@ -34,15 +47,6 @@ namespace House_Of_Horror
  ░  ░  ░    ░ ░     ░           ░     ░  ░       ░ ░              ░  ░  ░    ░ ░     ░        ░         ░ ░     ░     
                                                                                                                       
 ");
-
-            Console.ResetColor();
-
-            Console.WriteLine("Enter your player's name:");
-            string playerName = Console.ReadLine();
-            Player player = new Player(playerName); // Create a Player object
-            Rooms rooms = new Rooms(player); // Pass the Player object to the Rooms constructor
-            rooms.PlayGame();
         }
     }
 }
-

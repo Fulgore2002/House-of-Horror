@@ -93,6 +93,10 @@ namespace House_Of_Horror
 
         private void EnterLivingRoom()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Program.DisplayTitle();
+            Console.ResetColor();
             Console.WriteLine("You chose to go into the living room.");
             Console.WriteLine("As you walk in, you see a sleeping pitbull guarding some gold jewelry.");
             Console.WriteLine("Do you want to steal the jewelry? WARNING!");
@@ -176,6 +180,10 @@ namespace House_Of_Horror
 
         private void EnterMasterBedroom()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Program.DisplayTitle();
+            Console.ResetColor();
             Console.WriteLine("You chose to go into the master bedroom.");
             Console.WriteLine("As you walk in, you see an ornate bed and a large, dusty wardrobe.");
             Console.WriteLine("Do you want to open the wardrobe?");
@@ -252,6 +260,10 @@ namespace House_Of_Horror
 
         private void EnterDiningRoom()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Program.DisplayTitle();
+            Console.ResetColor();
             Console.WriteLine("You chose to go into the dining room.");
             Console.WriteLine("As you walk in, you see a shiny vase on the table.");
             Console.WriteLine("Do you want to open it?");
@@ -297,6 +309,10 @@ namespace House_Of_Horror
 
         private void EnterKitchen()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Program.DisplayTitle();
+            Console.ResetColor();
             Console.WriteLine("You chose to go into the kitchen.");
             Console.WriteLine("As you walk in, you see a refrigerator humming loudly.");
             Console.WriteLine("Do you want to open the refrigerator?");
@@ -374,6 +390,10 @@ namespace House_Of_Horror
 
         private void EnterBackyard()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Program.DisplayTitle();
+            Console.ResetColor();
             Console.WriteLine("You chose to go into the backyard.");
             Console.WriteLine("As you walk outside, you see an old shed with a rusty lock.");
 
