@@ -54,5 +54,11 @@ namespace House_Of_Horror
                 Console.WriteLine("Your inventory is empty.");
             }
         }
+        public void Clear()
+        {
+            // Clear the player's inventory
+            items.Clear(); 
+            Console.WriteLine("Game Over! Your inventory has been cleared."); 
+        }
     }
 }

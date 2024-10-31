@@ -21,22 +21,41 @@ namespace House_Of_Horror
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            DisplayTitle();
-            Console.ResetColor();
+            bool playAgain = true;
+            while (playAgain)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                DisplayTitle();
+                Console.ResetColor();
 
-            Console.WriteLine("Enter your player's name:");
-            string playerName = Console.ReadLine();
+                // Prompt for the player's name
+                Console.WriteLine("Enter your player's name:");
+                string playerName = Console.ReadLine();
 
-            Player player = new Player(playerName); // Create a Player object
-            Rooms rooms = new Rooms(player); // Pass the Player object to the Rooms constructor
-            rooms.PlayGame();
+                // Create a Player object
+                Player player = new Player(playerName);
+
+                Rooms rooms = new Rooms(player);
+
+                // Start the game
+                rooms.PlayGame();
+
+                // After the game ends
+                Console.WriteLine("Game Over. Do you want to play again? (yes/no)");
+                string playAgainResponse = Console.ReadLine();
+
+                if (playAgainResponse.ToLower() != "yes")
+                {
+                    playAgain = false; // Exit the loop if the player does not want to play again
+                }
+
+                Console.Clear();
+            }
         }
 
         public static void DisplayTitle()
         {
-            Console.WriteLine(@"
- ██░ ██  ▒█████   █    ██   ██████ ▓█████     ▒█████    █████▒    ██░ ██  ▒█████   ██▀███   ██▀███   ▒█████   ██▀███  
+            Console.WriteLine(@" ██░ ██  ▒█████   █    ██   ██████ ▓█████     ▒█████    █████▒    ██░ ██  ▒█████   ██▀███   ██▀███   ▒█████   ██▀███  
 ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀    ▒██▒  ██▒▓██   ▒    ▓██░ ██▒▒██▒  ██▒▓██ ▒ ██▒▓██ ▒ ██▒▒██▒  ██▒▓██ ▒ ██▒
 ▒██▀▀██░▒██░  ██▒▓██  ▒██░░ ▓██▄   ▒███      ▒██░  ██▒▒████ ░    ▒██▀▀██░▒██░  ██▒▓██ ░▄█ ▒▓██ ░▄█ ▒▒██░  ██▒▓██ ░▄█ ▒
 ░▓█ ░██ ▒██   ██░▓▓█  ░██░  ▒   ██▒▒▓█  ▄    ▒██   ██░░▓█▒  ░    ░▓█ ░██ ▒██   ██░▒██▀▀█▄  ▒██▀▀█▄  ▒██   ██░▒██▀▀█▄  
