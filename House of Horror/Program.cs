@@ -11,8 +11,8 @@ In this game you play as an anonymous adventurer trying to make a name for thems
 This game is going to be about exploring an old, haunted house trying to find jewels or cash (Money).
 You will also find items that you can take and use in other rooms to help you get through the house.
 Tyler Hitchcock
-10/16/2024
-Credits: help from YouTuber Shaun Halverson video
+10/30/2024
+Credits: idea from the YouTuber Shaun Halverson
 */
 
 namespace House_Of_Horror
